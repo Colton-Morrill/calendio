@@ -22,7 +22,7 @@ $(function () {
 
     let options = {
         rootMargin: '-50% 0% -50% 0%',
-        threshold: 0.0
+        threshold: 0
     }
 
     let observer = new IntersectionObserver(showItem, options);
@@ -32,16 +32,25 @@ $(function () {
             if (entry.isIntersecting) {
                 entry.target.classList.add('active');
                 if ($("#benefit-1").hasClass('active')) {
-                    $(".benefit-image img").attr('src', '/images/benefit-1.png')
+                    
+                    $(".benefit-image .image-1 ").addClass('opacity-1');
+                    $(".benefit-image .image-2 ").removeClass('opacity-1');
+                    $(".benefit-image .image-3 ").removeClass('opacity-1');
                 }
                 else if ($("#benefit-2").hasClass('active')) {
-                    $(".benefit-image img").attr('src', '/images/benefit-2.png')
+                    $(".benefit-image .image-2 ").toggleClass('opacity-1');
+                    
+                    $(".benefit-image .image-1 ").removeClass('opacity-1');
+                    $(".benefit-image .image-3 ").removeClass('opacity-1');
                 }
                 else if ($("#benefit-3").hasClass('active')) {
-                    $(".benefit-image img").attr('src', '/images/benefit-3.png')
+                    
+                    $(".benefit-image .image-3 ").addClass('opacity-1');
+                    $(".benefit-image .image-2 ").removeClass('opacity-1');
+                    $(".benefit-image .image-1 ").removeClass('opacity-1');
                 }
                 else {
-                    $(".benefit-image img").attr('src', '/images/benefit-1.png')
+                    $(".benefit-image img").removeClass('opacity-1');
                 }
             }
             else {
