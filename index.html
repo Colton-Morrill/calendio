@@ -5,12 +5,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calendio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/styles/styles.css">
 </head>
 
 <body>
     <header>
-        <nav class="nav-layout content-width">
+        <nav class="nav-layout content-width hidden-sm">
             <div class="nav-left">
                 <a href="/" class="nav-branding">
                     <img src="/images/logotype.svg" alt="Calendio main logo in purple." />
@@ -31,6 +32,38 @@
                 </a>
             </div>
         </nav>
+            <div class="flex justify-between items-center px-3 toggle hidden-lg flex-sm">
+                <div>
+                    <img src="/images/logotype.svg" alt="" />
+                </div>
+                <div>
+                    <button class="toggle-menu navbar-toggler-icon"></button>
+                </div>
+            </div>
+            <nav class="nav-mobile content-width hidden-lg flex-sm flex-col nav-hidden relative">
+                <div class="nav-left flex-col">
+                    <div class="close-menu">
+                        <button class="toggle-menu navbar-toggler-icon dark"></button>
+                    </div>
+                    <a href="/" class="nav-branding">
+                        <img src="/images/logotype-2.svg" alt="Calendio main logo in purple." />
+                    </a>
+                    <a href="#" class="nav-link">Why Calendio</a>
+                    <a href="#" class="nav-link">Features</a>
+                    <a href="#" class="nav-link">Pricing</a>
+                    <a href="#" class="nav-link">Enterprise</a>
+                    <a href="#" class="nav-link">Join Us</a>
+                    <a href="#" class="nav-link">Login</a>
+                </div>
+                <div class="flex flex-col">
+                    <a href="#" class="button primary nav-button-gap">
+                        Start Free Trial
+                    </a>
+                    <a href="#" class="button secondary">
+                        Schedule Demo
+                    </a>
+                </div>
+            </nav>
     </header>
     <main>
         <section id="hero">
@@ -40,11 +73,11 @@
                     <p>Calendio booking software helps you automate bookings, payments and reminders and manage
                         services, employees, and locations. Set your schedule and availability, and watch your
                         appointments get booked 24/7.</p>
-                    <div>
-                        <a href="#" class="button primary lg nav-button-gap inline-block">
+                    <div class="flex row-wrap">
+                        <a href="#" class="button primary lg nav-button-gap">
                             Start Free Trial
                         </a>
-                        <a href="#" class="button secondary lg inline-block">
+                        <a href="#" class="button secondary lg">
                             Schedule Demo
                         </a>
                     </div>
@@ -91,21 +124,30 @@
                             <p>Encourage early booking with the personalized booking environment created by Calendio.
                                 Our appointment booking software easily integrates with your website, making it a
                                 stress-free online booking experience for your client.</p>
+                                <div class="benefit-container hidden-lg visible-sm">
+                                    <img src="/images/benefit-1.png" alt="benefit-1" />
+                                </div>
                         </div>
                         <div id="benefit-2" class="benefit benefit-spacer animate-image">
                             <h2>Appointment reminders for all participants</h2>
                             <p>No more forgotten appointments. Our scheduling software will automatically send email and
                                 SMS notifications so that both the staff and the customers receive appointment reminders
                                 and updates.</p>
+                                <div class="benefit-container hidden-lg visible-sm">
+                                    <img src="/images/benefit-2.png" alt="benefit-1" />
+                                </div>
                         </div>
                         <div id="benefit-3" class="benefit benefit-spacer animate-image">
                             <h2>Monitor your business performance</h2>
                             <p>The Calendio online booking system helps you increase sales by providing important
                                 business reports and dashboards to help you track the performance of your business
                                 through vital KPIs and statistics.</p>
+                                <div class="benefit-container hidden-lg visible-sm">
+                                    <img src="/images/benefit-3.png" alt="benefit-1" />
+                                </div>
                         </div>
                     </div>
-                    <div class="relative">
+                    <div class="relative hidden-sm">
                         <div class="benefit-image hidden visible sticky">
                             <img src="/images/benefit-1.png" alt="benefit-1" />
                         </div>
@@ -172,8 +214,36 @@
             </div>
         </section>
     </main>
-    <footer>
-
+    <footer id="footer">
+        <div class="content-width">
+            <div>
+                <h3>Stay in the loop with our newsletter</h3>
+            </div>
+            <div class="flex justify-end">
+                <div class="input-group">
+                    <input placeholder="Enter your email address..." />
+                    <button class="button primary">Subscribe</button>
+                </div>
+            </div>
+            <div>
+                <nav class="nav-layout content-width">
+                    <div class="nav-left">
+                        <a href="/" class="nav-branding">
+                            <img src="/images/logotype-2.svg" alt="Calendio main logo in purple." />
+                        </a>
+                        <a href="#" class="nav-link">Why Calendio</a>
+                        <a href="#" class="nav-link">Features</a>
+                        <a href="#" class="nav-link">Pricing</a>
+                        <a href="#" class="nav-link">Enterprise</a>
+                        <a href="#" class="nav-link">Join Us</a>
+                        <a href="#" class="nav-link">Login</a>
+                    </div>
+                    <div>
+                        <p class="nav-link">All Rights Reserved © Calendio 2023</p>
+                    </div>
+                </nav>
+            </div>
+        </div>
     </footer>
 
     <script src="https://code.jquery.com/jquery-3.7.0.min.js"

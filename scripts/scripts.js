@@ -1,5 +1,10 @@
 $(function () {
 
+    $( ".toggle-menu" ).on( "click", function() {
+        $('.nav-mobile').toggleClass('nav-hidden');
+        $('.toggle').toggleClass('nav-hidden');
+    } );
+
     $(function () {
         $(document).scroll(function () {
           var $nav = $("header");
@@ -25,7 +30,6 @@ $(function () {
     function showItem(entries) {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                console.log(entry);
                 entry.target.classList.add('active');
                 if ($("#benefit-1").hasClass('active')) {
                     $(".benefit-image img").attr('src', '/images/benefit-1.png')
@@ -54,7 +58,6 @@ $(function () {
     function durationSlider(num) {
         var listItems = 3;
         var count = num;
-        console.log(num)
         timerInterval = setInterval(switchAccordion, 7000)
         function switchAccordion() {
             allPanels.removeClass('active').slideUp();
