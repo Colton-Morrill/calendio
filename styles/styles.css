@@ -1,0 +1,305 @@
+/* CSS RESET */
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+    overflow-x: hidden;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/********************************************/
+
+/* Page Styles */
+
+* {
+    font-family: Helvetica, sans-serif !important;
+}
+
+.content-width {
+    max-width: 1400px;
+    margin-left:auto;
+    margin-right: auto;
+}
+
+header {
+    background-color: #EAECF2;
+    position: sticky;
+    top:0;
+    z-index: 9999;
+    transition: 0.25s ease-in-out;
+}
+
+header.scrolled {
+    background-color: white;
+    box-shadow: 0 0.5rem 1rem rgb(133 150 168 / 15%) !important;
+}
+
+.nav-layout {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 0;
+}
+
+.nav-left {
+    display: flex; 
+    justify-content: space-around;
+    align-items: center;
+}
+
+.nav-link {
+    font-size: 14px;
+    font-weight: bold;
+    color: #140F46;
+    text-decoration: none;
+    margin: 0 2rem;
+}
+
+.nav-button-gap {
+    margin-right: 20px;
+}
+
+.nav-branding {
+    margin-right: 50px;
+}
+
+.button {
+    color: white;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 2px;
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.button.primary {
+    background: #393DCF;
+}
+.button.secondary {
+    background: #11225B;
+}
+
+.button.primary.lg {
+    padding: 25px 20px;
+    font-size: 18px;
+}
+
+.button.secondary.lg {
+    padding: 25px 20px;
+    font-size: 18px;
+}
+
+#hero {
+    padding: 50px 0 80px 0;
+    background-color: #EAECF2;
+}
+
+#hero > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#hero > div > div:first-of-type {
+    width: 40%;
+}
+
+#hero > div > div:last-of-type {
+    width: 60%;
+}
+
+#hero > div > div img {
+    width: 100%;
+}
+
+#hero h1{
+    font-size: 50px;
+    color: #140F46;
+    line-height: 60px;
+    font-weight: bold;
+    margin-bottom: 30px
+}
+
+#hero p {
+    font-size: 20px;
+    color: #433D5C;
+    line-height: 30px;
+    margin-bottom: 30px;
+}
+
+.inline-block {
+    display: inline-block;
+}
+
+#affiliates {
+    padding: 60px 0;
+    background-color: #140F46;
+}
+
+#affiliates > div {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+
+#benefits h2 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    font-weight: bold;
+    color: #140F46;
+    line-height: 48px;
+}
+
+#benefits p {
+    font-size: 18px;
+    color: #433D5C;
+    line-height: 27px;
+}
+
+.feature {
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    padding-top: 80px;
+}
+
+.feature > div {
+    width: 40%;
+}
+
+.hidden {
+    display: none;
+} 
+.visible {
+    display: block;
+}
+.benefit-spacer {
+    margin-bottom: 250px;
+}
+
+.relative {
+    position: relative;
+}
+
+.sticky {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 29vh;
+    height: 360px;
+}
+
+#features {
+    margin-top: 250px;
+    background-color: #EAECF2;
+    padding: 80px 0;
+}
+
+#features > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: start;
+}
+
+#features > div > div{
+    width: 50%;
+}
+
+.accordion {
+    margin: 50px;
+    width: 100%;
+}
+
+.active .progress-bar {
+    width: 100%;
+    height: 5px;
+    background-color: #CED7F1;
+    position: absolute;
+    top: 0;
+}
+
+.progress {
+    width: 0%;
+    height: 100%;
+    background-color: #393DCF;
+    animation: progressBar 7s linear infinite;
+}
+
+.accordion a {
+    font-size: 24px;
+    font-weight: bold;
+    line-height: 28.8px;
+    color: #140F46;
+    text-decoration: none;
+    display: block;
+    padding: 20px 0 20px 0;
+}
+
+.accordion p {
+    color: #433D5C;
+    font-size: 16px;
+    line-height: 24px;
+}
+
+a.lead-link {
+    color: #393DCF;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.accordion-item {
+    border-bottom: 1px solid #CED7F1;
+}
+
+@keyframes progressBar {
+    from {width: 0%;}
+    to {width: 100%;}
+  }
+
+/* Mobile Styling */
+
+@media screen and (max-width: 992px) {
+    #hero > div > div {
+        width: 100%;
+    }
+}
