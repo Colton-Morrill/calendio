@@ -347,6 +347,7 @@ a.lead-link {
     border-radius: 2px;
     width: 100%;
     margin-left: 150px;
+    justify-content: space-between;
 }
 #footer input {
     padding: 20px 10px;
